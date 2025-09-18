@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+.no-scrollbar::-webkit-scrollbar { display: none; } /* Chrome / Safari */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; } /* Firefox & Edge */
+
+@layer utilities {
+  @keyframes swing {
+    0%   { transform: rotate(4deg); }
+    50%  { transform: rotate(-4deg); }
+    100% { transform: rotate(4deg); } 
+  }
+
+  .animate-swing {
+    animation: swing 2.5s ease-in-out infinite;
+    
+  }
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
