@@ -12,7 +12,7 @@ connectDB();
 
 app.use(express.json());
 
-const allowedOrigins = process.env.FORNTEND_URL;
+const allowedOrigins = process.env.FRONTEND_URL;
 //cors used to send the cookies in the response.
 app.use(cookieParser());   
 app.use(cors({origin: allowedOrigins, credentials: true}));
